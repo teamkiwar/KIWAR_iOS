@@ -7,15 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		150547F7223E7CAF005851FC /* ARScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150547F6223E7CAF005851FC /* ARScanViewController.swift */; };
+		152B27E2227EFD74008C9609 /* FindGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152B27E1227EFD74008C9609 /* FindGameViewController.swift */; };
+		152B27E4227EFD80008C9609 /* CatchGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152B27E3227EFD80008C9609 /* CatchGameViewController.swift */; };
 		1552BC14223E316A00D343ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552BC13223E316A00D343ED /* AppDelegate.swift */; };
 		1552BC16223E316A00D343ED /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 1552BC15223E316A00D343ED /* art.scnassets */; };
 		1552BC18223E316A00D343ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552BC17223E316A00D343ED /* ViewController.swift */; };
 		1552BC1B223E316A00D343ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1552BC19223E316A00D343ED /* Main.storyboard */; };
 		1552BC1D223E316B00D343ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1552BC1C223E316B00D343ED /* Assets.xcassets */; };
 		1552BC20223E316B00D343ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1552BC1E223E316B00D343ED /* LaunchScreen.storyboard */; };
+		1552BC28223E31A300D343ED /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552BC27223E31A300D343ED /* MainViewController.swift */; };
+		1552BC2B223E33B300D343ED /* StudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552BC2A223E33B300D343ED /* StudyViewController.swift */; };
+		1552BC2D223E33C200D343ED /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552BC2C223E33C200D343ED /* PlayViewController.swift */; };
+		1552BC2F223E33D500D343ED /* DecoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552BC2E223E33D500D343ED /* DecoViewController.swift */; };
+		1552BC31223E33E100D343ED /* DictViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552BC30223E33E100D343ED /* DictViewController.swift */; };
+		1552BC33223E37ED00D343ED /* WordCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552BC32223E37ED00D343ED /* WordCardViewController.swift */; };
+		1552BC39223E385C00D343ED /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552BC38223E385C00D343ED /* Extension.swift */; };
+		1552BC3B223E39C200D343ED /* WordCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552BC3A223E39C200D343ED /* WordCardCollectionViewCell.swift */; };
+		1552BC49223E647D00D343ED /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552BC48223E647D00D343ED /* Word.swift */; };
+		5B749861625EB18BEBC079C7 /* Pods_KiWar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96213589BB9C23410DBE56FB /* Pods_KiWar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		150547F6223E7CAF005851FC /* ARScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARScanViewController.swift; sourceTree = "<group>"; };
+		152B27E1227EFD74008C9609 /* FindGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindGameViewController.swift; sourceTree = "<group>"; };
+		152B27E3227EFD80008C9609 /* CatchGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchGameViewController.swift; sourceTree = "<group>"; };
 		1552BC10223E316A00D343ED /* KiWar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KiWar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1552BC13223E316A00D343ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1552BC15223E316A00D343ED /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -24,6 +40,18 @@
 		1552BC1C223E316B00D343ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1552BC1F223E316B00D343ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1552BC21223E316B00D343ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1552BC27223E31A300D343ED /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1552BC2A223E33B300D343ED /* StudyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyViewController.swift; sourceTree = "<group>"; };
+		1552BC2C223E33C200D343ED /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+		1552BC2E223E33D500D343ED /* DecoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoViewController.swift; sourceTree = "<group>"; };
+		1552BC30223E33E100D343ED /* DictViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictViewController.swift; sourceTree = "<group>"; };
+		1552BC32223E37ED00D343ED /* WordCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCardViewController.swift; sourceTree = "<group>"; };
+		1552BC38223E385C00D343ED /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		1552BC3A223E39C200D343ED /* WordCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		1552BC48223E647D00D343ED /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		96213589BB9C23410DBE56FB /* Pods_KiWar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KiWar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFD83CB8F0123A0FFFE2EA36 /* Pods-KiWar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiWar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KiWar/Pods-KiWar.debug.xcconfig"; sourceTree = "<group>"; };
+		E42177C0A61559F9235C2943 /* Pods-KiWar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiWar.release.xcconfig"; path = "Pods/Target Support Files/Pods-KiWar/Pods-KiWar.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B749861625EB18BEBC079C7 /* Pods_KiWar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +71,8 @@
 			children = (
 				1552BC12223E316A00D343ED /* KiWar */,
 				1552BC11223E316A00D343ED /* Products */,
+				3ECCD72806DFDE62D9B40FF1 /* Pods */,
+				718940C32738DEBAE88D025F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +87,92 @@
 		1552BC12223E316A00D343ED /* KiWar */ = {
 			isa = PBXGroup;
 			children = (
+				1552BC47223E645A00D343ED /* Model */,
+				1552BC29223E339400D343ED /* ViewController */,
 				1552BC13223E316A00D343ED /* AppDelegate.swift */,
-				1552BC15223E316A00D343ED /* art.scnassets */,
-				1552BC17223E316A00D343ED /* ViewController.swift */,
 				1552BC19223E316A00D343ED /* Main.storyboard */,
+				1552BC15223E316A00D343ED /* art.scnassets */,
 				1552BC1C223E316B00D343ED /* Assets.xcassets */,
 				1552BC1E223E316B00D343ED /* LaunchScreen.storyboard */,
 				1552BC21223E316B00D343ED /* Info.plist */,
+				1552BC38223E385C00D343ED /* Extension.swift */,
 			);
 			path = KiWar;
+			sourceTree = "<group>";
+		};
+		1552BC29223E339400D343ED /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1552BC34223E37F800D343ED /* Study */,
+				1552BC35223E380500D343ED /* Play */,
+				1552BC37223E381300D343ED /* Deco */,
+				1552BC36223E380E00D343ED /* Dict */,
+				1552BC17223E316A00D343ED /* ViewController.swift */,
+				1552BC27223E31A300D343ED /* MainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		1552BC34223E37F800D343ED /* Study */ = {
+			isa = PBXGroup;
+			children = (
+				1552BC2A223E33B300D343ED /* StudyViewController.swift */,
+				1552BC32223E37ED00D343ED /* WordCardViewController.swift */,
+				1552BC3A223E39C200D343ED /* WordCardCollectionViewCell.swift */,
+				150547F6223E7CAF005851FC /* ARScanViewController.swift */,
+			);
+			path = Study;
+			sourceTree = "<group>";
+		};
+		1552BC35223E380500D343ED /* Play */ = {
+			isa = PBXGroup;
+			children = (
+				1552BC2C223E33C200D343ED /* PlayViewController.swift */,
+				152B27E1227EFD74008C9609 /* FindGameViewController.swift */,
+				152B27E3227EFD80008C9609 /* CatchGameViewController.swift */,
+			);
+			path = Play;
+			sourceTree = "<group>";
+		};
+		1552BC36223E380E00D343ED /* Dict */ = {
+			isa = PBXGroup;
+			children = (
+				1552BC30223E33E100D343ED /* DictViewController.swift */,
+			);
+			path = Dict;
+			sourceTree = "<group>";
+		};
+		1552BC37223E381300D343ED /* Deco */ = {
+			isa = PBXGroup;
+			children = (
+				1552BC2E223E33D500D343ED /* DecoViewController.swift */,
+			);
+			path = Deco;
+			sourceTree = "<group>";
+		};
+		1552BC47223E645A00D343ED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1552BC48223E647D00D343ED /* Word.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3ECCD72806DFDE62D9B40FF1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CFD83CB8F0123A0FFFE2EA36 /* Pods-KiWar.debug.xcconfig */,
+				E42177C0A61559F9235C2943 /* Pods-KiWar.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		718940C32738DEBAE88D025F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96213589BB9C23410DBE56FB /* Pods_KiWar.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +182,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1552BC24223E316B00D343ED /* Build configuration list for PBXNativeTarget "KiWar" */;
 			buildPhases = (
+				C449B09B2A1B322402D06143 /* [CP] Check Pods Manifest.lock */,
 				1552BC0C223E316900D343ED /* Sources */,
 				1552BC0D223E316900D343ED /* Frameworks */,
 				1552BC0E223E316900D343ED /* Resources */,
+				094B8547591C80D9810F3D26 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,12 +244,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		094B8547591C80D9810F3D26 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-KiWar/Pods-KiWar-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ColorSlider/ColorSlider.framework",
+				"${BUILT_PRODUCTS_DIR}/Each/Each.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ColorSlider.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Each.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KiWar/Pods-KiWar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C449B09B2A1B322402D06143 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KiWar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1552BC0C223E316900D343ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				150547F7223E7CAF005851FC /* ARScanViewController.swift in Sources */,
+				1552BC3B223E39C200D343ED /* WordCardCollectionViewCell.swift in Sources */,
+				152B27E2227EFD74008C9609 /* FindGameViewController.swift in Sources */,
+				1552BC39223E385C00D343ED /* Extension.swift in Sources */,
+				1552BC2D223E33C200D343ED /* PlayViewController.swift in Sources */,
+				1552BC31223E33E100D343ED /* DictViewController.swift in Sources */,
+				1552BC2F223E33D500D343ED /* DecoViewController.swift in Sources */,
+				1552BC28223E31A300D343ED /* MainViewController.swift in Sources */,
+				1552BC49223E647D00D343ED /* Word.swift in Sources */,
+				1552BC33223E37ED00D343ED /* WordCardViewController.swift in Sources */,
+				1552BC2B223E33B300D343ED /* StudyViewController.swift in Sources */,
 				1552BC18223E316A00D343ED /* ViewController.swift in Sources */,
+				152B27E4227EFD80008C9609 /* CatchGameViewController.swift in Sources */,
 				1552BC14223E316A00D343ED /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,10 +455,11 @@
 		};
 		1552BC25223E316B00D343ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFD83CB8F0123A0FFFE2EA36 /* Pods-KiWar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T5Y35W5FL6;
+				DEVELOPMENT_TEAM = BCT9Z76PB5;
 				INFOPLIST_FILE = KiWar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,10 +474,11 @@
 		};
 		1552BC26223E316B00D343ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E42177C0A61559F9235C2943 /* Pods-KiWar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T5Y35W5FL6;
+				DEVELOPMENT_TEAM = BCT9Z76PB5;
 				INFOPLIST_FILE = KiWar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
