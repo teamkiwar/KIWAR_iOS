@@ -1,0 +1,20 @@
+PODS:
+  - ColorSlider (4.3)
+  - Each (1.2.0)
+
+DEPENDENCIES:
+  - ColorSlider
+  - Each (~> 1.2)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ColorSlider
+    - Each
+
+SPEC CHECKSUMS:
+  ColorSlider: 83fb6f174a13d7235ef100d8d5fee1f71adf2182
+  Each: 53d089bc231f4a7221ed201bf23ac343c5c4d560
+
+PODFILE CHECKSUM: 74d3fd4df8d6593893b79d0785cc70756e2ae56f
+
+COCOAPODS: 1.5.3
