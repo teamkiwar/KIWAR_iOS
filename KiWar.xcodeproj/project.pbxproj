@@ -25,6 +25,15 @@
 		1552BC39223E385C00D343ED /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552BC38223E385C00D343ED /* Extension.swift */; };
 		1552BC3B223E39C200D343ED /* WordCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552BC3A223E39C200D343ED /* WordCardCollectionViewCell.swift */; };
 		1552BC49223E647D00D343ED /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1552BC48223E647D00D343ED /* Word.swift */; };
+		158E4BF022912B4900E7FCCC /* KakaoCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158E4BEF22912B4900E7FCCC /* KakaoCommon.framework */; };
+		158E4BF22291343100E7FCCC /* KakaoNewtoneSpeech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158E4BF12291343100E7FCCC /* KakaoNewtoneSpeech.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		158E4BF42291370C00E7FCCC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158E4BF32291370C00E7FCCC /* AudioToolbox.framework */; };
+		158E4BF62291371D00E7FCCC /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 158E4BF52291371D00E7FCCC /* libiconv.tbd */; };
+		158E4BF82291372700E7FCCC /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 158E4BF72291372700E7FCCC /* libc++.tbd */; };
+		158E4BFA22913A8500E7FCCC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158E4BF922913A8500E7FCCC /* CoreGraphics.framework */; };
+		158E4BFC22913A8D00E7FCCC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158E4BFB22913A8D00E7FCCC /* QuartzCore.framework */; };
+		158E4BFE22913AE300E7FCCC /* KakaoNewtoneSpeechResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 158E4BFD22913AE300E7FCCC /* KakaoNewtoneSpeechResources.bundle */; };
+		158E4C0022913B3800E7FCCC /* SpeechRecognizerDefault.strings in Resources */ = {isa = PBXBuildFile; fileRef = 158E4BFF22913B3800E7FCCC /* SpeechRecognizerDefault.strings */; };
 		5B749861625EB18BEBC079C7 /* Pods_KiWar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96213589BB9C23410DBE56FB /* Pods_KiWar.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +58,15 @@
 		1552BC38223E385C00D343ED /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		1552BC3A223E39C200D343ED /* WordCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		1552BC48223E647D00D343ED /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		158E4BEF22912B4900E7FCCC /* KakaoCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoCommon.framework; sourceTree = "<group>"; };
+		158E4BF12291343100E7FCCC /* KakaoNewtoneSpeech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoNewtoneSpeech.framework; sourceTree = "<group>"; };
+		158E4BF32291370C00E7FCCC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		158E4BF52291371D00E7FCCC /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		158E4BF72291372700E7FCCC /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		158E4BF922913A8500E7FCCC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		158E4BFB22913A8D00E7FCCC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		158E4BFD22913AE300E7FCCC /* KakaoNewtoneSpeechResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = KakaoNewtoneSpeechResources.bundle; sourceTree = "<group>"; };
+		158E4BFF22913B3800E7FCCC /* SpeechRecognizerDefault.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = SpeechRecognizerDefault.strings; sourceTree = "<group>"; };
 		96213589BB9C23410DBE56FB /* Pods_KiWar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KiWar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFD83CB8F0123A0FFFE2EA36 /* Pods-KiWar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiWar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KiWar/Pods-KiWar.debug.xcconfig"; sourceTree = "<group>"; };
 		E42177C0A61559F9235C2943 /* Pods-KiWar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KiWar.release.xcconfig"; path = "Pods/Target Support Files/Pods-KiWar/Pods-KiWar.release.xcconfig"; sourceTree = "<group>"; };
@@ -59,7 +77,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				158E4BFC22913A8D00E7FCCC /* QuartzCore.framework in Frameworks */,
+				158E4BFA22913A8500E7FCCC /* CoreGraphics.framework in Frameworks */,
+				158E4BF82291372700E7FCCC /* libc++.tbd in Frameworks */,
+				158E4BF62291371D00E7FCCC /* libiconv.tbd in Frameworks */,
+				158E4BF42291370C00E7FCCC /* AudioToolbox.framework in Frameworks */,
 				5B749861625EB18BEBC079C7 /* Pods_KiWar.framework in Frameworks */,
+				158E4BF022912B4900E7FCCC /* KakaoCommon.framework in Frameworks */,
+				158E4BF22291343100E7FCCC /* KakaoNewtoneSpeech.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +94,8 @@
 		1552BC07223E316900D343ED = {
 			isa = PBXGroup;
 			children = (
+				158E4BFF22913B3800E7FCCC /* SpeechRecognizerDefault.strings */,
+				158E4BFD22913AE300E7FCCC /* KakaoNewtoneSpeechResources.bundle */,
 				1552BC12223E316A00D343ED /* KiWar */,
 				1552BC11223E316A00D343ED /* Products */,
 				3ECCD72806DFDE62D9B40FF1 /* Pods */,
@@ -87,6 +114,8 @@
 		1552BC12223E316A00D343ED /* KiWar */ = {
 			isa = PBXGroup;
 			children = (
+				158E4BF12291343100E7FCCC /* KakaoNewtoneSpeech.framework */,
+				158E4BEF22912B4900E7FCCC /* KakaoCommon.framework */,
 				1552BC47223E645A00D343ED /* Model */,
 				1552BC29223E339400D343ED /* ViewController */,
 				1552BC13223E316A00D343ED /* AppDelegate.swift */,
@@ -107,7 +136,6 @@
 				1552BC35223E380500D343ED /* Play */,
 				1552BC37223E381300D343ED /* Deco */,
 				1552BC36223E380E00D343ED /* Dict */,
-				1552BC17223E316A00D343ED /* ViewController.swift */,
 				1552BC27223E31A300D343ED /* MainViewController.swift */,
 			);
 			path = ViewController;
@@ -120,6 +148,7 @@
 				1552BC32223E37ED00D343ED /* WordCardViewController.swift */,
 				1552BC3A223E39C200D343ED /* WordCardCollectionViewCell.swift */,
 				150547F6223E7CAF005851FC /* ARScanViewController.swift */,
+				1552BC17223E316A00D343ED /* ViewController.swift */,
 			);
 			path = Study;
 			sourceTree = "<group>";
@@ -170,6 +199,11 @@
 		718940C32738DEBAE88D025F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				158E4BFB22913A8D00E7FCCC /* QuartzCore.framework */,
+				158E4BF922913A8500E7FCCC /* CoreGraphics.framework */,
+				158E4BF72291372700E7FCCC /* libc++.tbd */,
+				158E4BF52291371D00E7FCCC /* libiconv.tbd */,
+				158E4BF32291370C00E7FCCC /* AudioToolbox.framework */,
 				96213589BB9C23410DBE56FB /* Pods_KiWar.framework */,
 			);
 			name = Frameworks;
@@ -235,6 +269,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				158E4C0022913B3800E7FCCC /* SpeechRecognizerDefault.strings in Resources */,
+				158E4BFE22913AE300E7FCCC /* KakaoNewtoneSpeechResources.bundle in Resources */,
 				1552BC16223E316A00D343ED /* art.scnassets in Resources */,
 				1552BC20223E316B00D343ED /* LaunchScreen.storyboard in Resources */,
 				1552BC1D223E316B00D343ED /* Assets.xcassets in Resources */,
@@ -460,6 +496,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BCT9Z76PB5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KiWar",
+				);
 				INFOPLIST_FILE = KiWar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -479,6 +519,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BCT9Z76PB5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KiWar",
+				);
 				INFOPLIST_FILE = KiWar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

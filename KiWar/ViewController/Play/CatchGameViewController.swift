@@ -37,7 +37,7 @@ class CatchGameViewController: UIViewController {
     
     
     func addNode(name: String, range: CGFloat){
-        let rootScene = SCNScene(named: "art.scnassets/"+name+"/"+name+".scn")
+        let rootScene = SCNScene(named: "art.scnassets/\(name)/\(name).scn")
         let node = rootScene?.rootNode.childNode(withName: name, recursively: false)
         
         node?.position = SCNVector3(range,-3,-5)
