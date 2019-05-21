@@ -11,13 +11,15 @@ import SceneKit
 import ARKit
 import KakaoNewtoneSpeech
 
-class ViewController: UIViewController, ARSCNViewDelegate {
-
+class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
+    
     @IBOutlet var sceneView: ARSCNView!
     var name: String = ""
     var mean: String = ""
     let speechClient = MTSpeechRecognizerClient(config: [SpeechRecognizerConfigKeyServiceType: SpeechRecognizerServiceTypeWord])
-    var speechView = MTSpeechRecognizerView()
+    
+    var node: SCNNode?
+    var currentAngleY: Float = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,21 +27,66 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.delegate = self
         sceneView.showsStatistics = true
         
+        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(didPinch(_:)))
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(didPan(_:)))
+        sceneView.addGestureRecognizer(pinchGesture)
+        sceneView.addGestureRecognizer(panGesture)
         speechClient?.delegate = self
-        speechView.delegate = self
-        speechView.frame = self.view.frame
-        speechView = MTSpeechRecognizerView(frame: self.view.frame, withConfig: [SpeechRecognizerConfigKeyApiKey: "276b121c823e351749a027ba4d01d052"])
         
         // Create a new scene
         if let scene = SCNScene(named: "art.scnassets/\(name)/\(name).scn"){
-            if let node = scene.rootNode.childNode(withName: name, recursively: false){
-                node.position = SCNVector3(0,-3,-6)
-                sceneView.scene.rootNode.addChildNode(node)
-            }
+            node = scene.rootNode.childNode(withName: name, recursively: false)
+            node!.position = SCNVector3(0,-3,-6)
+            sceneView.scene.rootNode.addChildNode(node!)
+            
         }else{
             
         }
         
+    }
+    
+    @objc func didPinch(_ gesture: UIPinchGestureRecognizer) {
+        guard let _ = node else { return }
+        var originalScale = node?.scale
+        
+        switch gesture.state {
+        case .began:
+            originalScale = node?.scale
+            gesture.scale = CGFloat((node?.scale.x)!)
+        case .changed:
+            guard var newScale = originalScale else { return }
+            if gesture.scale < 0.5{ newScale = SCNVector3(x: 0.5, y: 0.5, z: 0.5) }else if gesture.scale > 2{
+                newScale = SCNVector3(2, 2, 2)
+            }else{
+                newScale = SCNVector3(gesture.scale, gesture.scale, gesture.scale)
+            }
+            node?.scale = newScale
+        case .ended:
+            guard var newScale = originalScale else { return }
+            if gesture.scale < 0.5{ newScale = SCNVector3(x: 0.5, y: 0.5, z: 0.5) }else if gesture.scale > 2{
+                newScale = SCNVector3(2, 2, 2)
+            }else{
+                newScale = SCNVector3(gesture.scale, gesture.scale, gesture.scale)
+            }
+            node?.scale = newScale
+            gesture.scale = CGFloat((node?.scale.x)!)
+        default:
+            gesture.scale = 1.0
+            originalScale = nil
+        }
+    }
+    
+    @objc func didPan(_ gesture: UIPanGestureRecognizer) {
+        guard let _ = node else { return }
+        let translation = gesture.translation(in: gesture.view)
+        var newAngleY = (Float)(translation.x)*(Float)(Double.pi)/180.0
+        
+        newAngleY += currentAngleY
+        node?.eulerAngles.y = newAngleY
+        
+        if gesture.state == .ended{
+            currentAngleY = newAngleY
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,12 +104,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Pause the view's session
         sceneView.session.pause()
     }
-
-    @IBAction func pronunciation(_ sender: Any) {
     
+    @IBAction func pronunciation(_ sender: Any) {
+        
         print("발음!!")
-        view.addSubview(speechView)
-        speechView.show()
+        
         
         speechClient?.startRecording()
         
@@ -84,7 +130,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
 }
 
-extension ViewController: MTSpeechRecognizerDelegate, MTSpeechRecognizerViewDelegate{
+extension ViewController: MTSpeechRecognizerDelegate{
     func onReady() {
         
     }
@@ -94,7 +140,7 @@ extension ViewController: MTSpeechRecognizerDelegate, MTSpeechRecognizerViewDele
     }
     
     func onEndOfSpeech() {
-        
+        print("END!!!")
     }
     
     func onError(_ errorCode: MTSpeechRecognizerError, message: String!) {
@@ -111,13 +157,12 @@ extension ViewController: MTSpeechRecognizerDelegate, MTSpeechRecognizerViewDele
         print(results)
         print("--------------------------------------")
         
-//        if results == "results[0]: \(mean)"{
-//            print("정답!!!!")
-//        }else{
-//            print("틀림!!!!")
-//        }
-//
-        
+        //        if results == "results[0]: \(mean)"{
+        //            print("정답!!!!")
+        //        }else{
+        //            print("틀림!!!!")
+        //        }
+        //
     }
     
     func onAudioLevel(_ audioLevel: Float) {
@@ -130,3 +175,5 @@ extension ViewController: MTSpeechRecognizerDelegate, MTSpeechRecognizerViewDele
     
     
 }
+
+

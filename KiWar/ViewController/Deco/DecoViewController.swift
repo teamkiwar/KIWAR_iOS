@@ -43,7 +43,7 @@ class DecoViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate
         
         sceneView.delegate  = self
         //sceneView.debugOptions = [.showWorldOrigin,.showFeaturePoints]
-        sceneView.showsStatistics = true
+        //sceneView.showsStatistics = true
 
         sceneView.session.run(configuration)
         
@@ -180,6 +180,8 @@ class DecoViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate
     }
     
     @IBAction func addObject(_ sender: Any) {
+        
+        
         guard let _ = object else { return }
         
         let tapLocation = CGPoint(x: 0, y: 0)
