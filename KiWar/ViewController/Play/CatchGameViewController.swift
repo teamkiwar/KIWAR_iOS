@@ -13,6 +13,7 @@ class CatchGameViewController: UIViewController {
 
     @IBOutlet weak var sceneView: ARSCNView!
     let configuration = ARWorldTrackingConfiguration()
+    var shuffleAnimals = animals
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,25 +23,30 @@ class CatchGameViewController: UIViewController {
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
         
-        sceneView.debugOptions = [.showWorldOrigin]
+        //sceneView.debugOptions = [.showWorldOrigin]
         sceneView.session.run(configuration)
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         sceneView.addGestureRecognizer(tap)
-        addNode(name: "Buffalo", range: -1)
-        addNode(name: "Lion", range: 2)
-        addNode(name: "Mouse", range: 5)
-
+        
+        initializeQuiz()
         
     }
     
+    func initializeQuiz(){
+        shuffleAnimals.shuffle()
+        print(shuffleAnimals)
+        addNode(name: shuffleAnimals[0].name, range: -3)
+        addNode(name: shuffleAnimals[1].name, range: 3)
+        addNode(name: shuffleAnimals[2].name, range: 9)
+    }
     
     
     func addNode(name: String, range: CGFloat){
-        let rootScene = SCNScene(named: "art.scnassets/"+name+"/"+name+".scn")
+        let rootScene = SCNScene(named: "art.scnassets/\(name)/\(name).scn")
         let node = rootScene?.rootNode.childNode(withName: name, recursively: false)
         
-        node?.position = SCNVector3(range,-3,-5)
+        node?.position = SCNVector3(range,-4,-8)
         sceneView.scene.rootNode.addChildNode(node!)
     }
     
@@ -90,7 +96,7 @@ extension CatchGameViewController{
         }
         
         animalArray.shuffle()
-        for i in 0..<3{
+        for i in 0..<2{
             if animalArray[i].name != name{
                 problemArray.append(animalArray[i].mean)
             }
@@ -105,6 +111,10 @@ extension CatchGameViewController{
                     let alert = UIAlertController(title: nil, message: "짝짝짝! 정답입니다!", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "확인", style: .default, handler: { (action) in
                         self.sceneView.scene.rootNode.childNode(withName: name, recursively: false)?.removeFromParentNode()
+                        if self.isGameEnd() {
+                            print("game over")
+                            self.navigationController?.popViewController(animated: true)
+                        }
                     }))
                     self.present(alert, animated: true, completion: nil)
                     
@@ -124,5 +134,12 @@ extension CatchGameViewController{
         
         self.navigationController?.present(alert, animated: true, completion: nil)
 
+    }
+    
+    func isGameEnd() -> Bool{
+        if sceneView.scene.rootNode.childNodes.count == 2{
+            return true
+        }
+        return false
     }
 }

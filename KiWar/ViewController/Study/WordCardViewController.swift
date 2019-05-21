@@ -58,6 +58,15 @@ extension WordCardViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        vc.name = words[indexPath.row].name
+        vc.mean = words[indexPath.row].mean
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
   
     
     
