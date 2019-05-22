@@ -35,7 +35,7 @@ class CatchGameViewController: UIViewController {
     
     func initializeQuiz(){
         shuffleAnimals.shuffle()
-        print(shuffleAnimals)
+        //print(shuffleAnimals)
         addNode(name: shuffleAnimals[0].name, range: -3)
         addNode(name: shuffleAnimals[1].name, range: 3)
         addNode(name: shuffleAnimals[2].name, range: 9)

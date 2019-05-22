@@ -43,7 +43,7 @@ class FindGameViewController: UIViewController {
         let random = Int.random(in: 0...2)
         answer = shuffleAnimals[random]
         answerLabel.text = answer?.mean
-        print(shuffleAnimals)
+        //print(shuffleAnimals)
         addNode(name: shuffleAnimals[0].name, range: -3)
         addNode(name: shuffleAnimals[1].name, range: 3)
         addNode(name: shuffleAnimals[2].name, range: 9)
